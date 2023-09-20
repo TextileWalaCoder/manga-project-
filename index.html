@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coin Fliping</title>
+  <link rel="stylesheet" href="/website/coin Toss game/Coin.css">
+
+</head>
+<body>
+  <button onclick="
+  pickRandomGuess();
+
+  let Result ='';
+
+  if (randomGuess === 'Heads') {
+    Result = 'You Wins'
+  }else if (randomGuess === 'Tails') {
+    Result = 'You lose.'
+  } 
+  alert(`You have Pick Head, Computer pick ${randomGuess}, ${Result}`);
+  ">Head</button>
+  <button onclick="
+  pickRandomGuess();
+
+  let Results ='';
+
+  if (randomGuess === 'Heads') {
+    Results = 'You Lose'
+  }else if (randomGuess === 'Tails') {
+    Results = 'You Wins.'
+  } 
+  alert(`You have Pick Head, Computer pick ${randomGuess}, ${Results}`);">Tail</button>
+
+
+  <script>
+    let randomGuess = "";
+    function pickRandomGuess() {
+      const mathRandom =Math.random()
+
+if (mathRandom>= 0 && mathRandom < 0.5) {
+  randomGuess ='Heads'
+} else if (mathRandom>= 0.5 && mathRandom < 1) {
+  randomGuess ='Tails'
+}
+console.log(mathRandom);
+    }
+  
+  </script>
+</body>
+</html>
